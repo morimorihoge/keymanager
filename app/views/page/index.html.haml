@@ -1,0 +1,21 @@
+.row
+  .col-md-12
+    %h1 BPS鍵管理しすてむ
+    %table.table.table-hover
+      %thead
+        %tr
+          %th Key
+          %th Status
+          %th Detail
+          %th Control
+      %tbody
+        - @items.each do |item|
+          %tr.success
+            %td= item.name
+            %td= image_tag item.icon_name, style: 'width: 40px;'
+            %td= item.current_status
+            - if item.available?
+              %td= link_to '貸出申請', new_item_history_path, class: 'btn btn-primary'
+            - else
+              %td= '利用中'
+

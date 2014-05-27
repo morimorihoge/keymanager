@@ -1,0 +1,52 @@
+!!!
+%html{:lang => "en"}
+  %head
+    / Meta, title, CSS, favicons, etc.
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.", :name => "description"}/
+    %meta{:content => "HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development", :name => "keywords"}/
+    %meta{:content => "Mark Otto, Jacob Thornton, and Bootstrap contributors", :name => "author"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    %title
+      BPS KeyChain
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body
+    -#%header#top.navbar.navbar-static-top.bs-docs-nav{:role => "banner"}
+    -#  .container
+    -#    .navbar-header
+    -#      %button.navbar-toggle{"data-target" => ".bs-navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+    -#        %span.sr-only Toggle navigation
+    -#        %span.icon-bar
+    -#        %span.icon-bar
+    -#        %span.icon-bar
+    -#      %a.navbar-brand{:href => "../"} KeyChain
+    -#    %nav.collapse.navbar-collapse.bs-navbar-collapse{:role => "navigation"}
+    -#      %ul.nav.navbar-nav
+            -#%li
+            -#  %a{:href => "../getting-started"} Getting started
+            -#%li
+            -#  %a{:href => "../css"} CSS
+            -#%li
+            -#  %a{:href => "../components"} Components
+            -#%li
+            -#  %a{:href => "../javascript"} JavaScript
+            -#%li
+            -#  %a{:href => "../customize"} Customize
+          -#%ul.nav.navbar-nav.navbar-right
+          -#  %li
+          -#    %a{:href => "http://expo.getbootstrap.com", :onclick => "_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Expo']);"} Expo
+          -#  %li
+          -#    %a{:href => "http://blog.getbootstrap.com", :onclick => "_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Blog']);"} Blog
+    / Page content of course!
+    %main#content
+      .container
+        = yield
+    %footer
+      .container
+        %hr
+        morimorihoge
